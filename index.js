@@ -31,7 +31,7 @@ async function run() {
         // await client.connect();
         const assignmentCollection = client.db('onlineGroupStudy').collection('assignments')
 
-        // get all assignments data from db
+        
         app.post('/assignment', async (req, res) => {
             const assignmentData= req.body;
             const result =await assignmentCollection.insertOne(assignmentData)
